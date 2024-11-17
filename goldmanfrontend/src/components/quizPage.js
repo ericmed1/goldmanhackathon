@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import '../css/quizPage.css';
+
 
 const Quizpage = () => {
   const [language, setLanguage] = useState(null); // null, "english", or "spanish"
@@ -23,7 +25,7 @@ const Quizpage = () => {
         a4,
         a5,
       };
-      setAnswers([...answers, newAnswers]);
+      setAnswers([...answers, newAnswers]); // the answers array has now been updated
       alert(language === "english" ? "Your answers have been submitted!" : "¡Tus respuestas han sido enviadas!");
     } else {
       alert(language === "english" ? "Please answer all questions" : "Por favor responde todas las preguntas");
@@ -32,7 +34,7 @@ const Quizpage = () => {
 
 
   return (
-    <div>
+    <div className="quizpageinfo">
       {!language ? (
         <>
           <h1>Select Your Language / Seleccione su idioma</h1>
@@ -55,7 +57,7 @@ const Quizpage = () => {
             <h3>
                 {language === "english" ? "Do you have an account?" : "¿Quieres manzanas o plátanos?"}
             </h3>
-            <button onClick={() => setA1("Yes")}>
+            <button onClick={() => setA1("Yes") }>
                 {language === "english" ? "Yes" : "Si"}
             </button>
             <button onClick={() => setA1("No")}>
@@ -76,7 +78,7 @@ const Quizpage = () => {
             </button>
 
             <h2>
-                {language === "english" ? "Question 1" : "Pregunta 1"}
+                {language === "english" ? "Question 3" : "Pregunta 1"}
             </h2>
             <h3>
                 {language === "english" ? "Do you have an account?" : "¿Quieres manzanas o plátanos?"}
@@ -89,7 +91,7 @@ const Quizpage = () => {
             </button>
 
             <h2>
-                {language === "english" ? "Question 1" : "Pregunta 1"}
+                {language === "english" ? "Question 4" : "Pregunta 1"}
             </h2>
             <h3>
                 {language === "english" ? "Do you have an account?" : "¿Quieres manzanas o plátanos?"}
@@ -102,7 +104,7 @@ const Quizpage = () => {
             </button>
 
             <h2>
-                {language === "english" ? "Question 1" : "Pregunta 1"}
+                {language === "english" ? "Question 5" : "Pregunta 1"}
             </h2>
             <h3>
                 {language === "english" ? "Do you have an account?" : "¿Quieres manzanas o plátanos?"}
